@@ -1,5 +1,6 @@
 package training.registration.handler.impl;
 
+import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
 import training.registration.exception.CarRegistrationException;
@@ -9,6 +10,7 @@ import training.registration.handler.RegistrationChainHandler;
  * Hides the details of your system and provide less verbose messages to the client.
  * @author Roman Horilyi
  */
+@Component
 public class ExceptionTranslatorHandler implements RegistrationChainHandler {
 
     @Override

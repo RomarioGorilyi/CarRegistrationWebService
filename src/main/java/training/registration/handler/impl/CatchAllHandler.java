@@ -1,5 +1,7 @@
 package training.registration.handler.impl;
 
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
 import training.registration.handler.RegistrationChainHandler;
@@ -10,8 +12,9 @@ import lombok.Data;
  * Successfully stops processing of a chain.
  * @author Roman Horilyi
  */
+@Component
 @Data
-@AllArgsConstructor
+@NoArgsConstructor
 public class CatchAllHandler implements RegistrationChainHandler {
 
     private boolean fail;

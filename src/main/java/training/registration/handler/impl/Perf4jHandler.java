@@ -1,5 +1,6 @@
 package training.registration.handler.impl;
 
+import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
 import training.registration.handler.RegistrationChainHandler;
@@ -12,6 +13,7 @@ import javax.annotation.PostConstruct;
 /**
  * @author Roman Horilyi
  */
+@Component
 public class Perf4jHandler implements RegistrationChainHandler {
 
     /**

@@ -1,5 +1,6 @@
 package training.registration.handler.impl;
 
+import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
 import training.registration.exception.CarRegistrationException;
@@ -17,6 +18,7 @@ import java.util.concurrent.*;
  * But if the invocation has not finished and the timeout is reached, client will get only error message.
  * @author Roman Horilyi
  */
+//@Component
 public class HandlerWithTimeout implements RegistrationChainHandler {
 
     @Resource

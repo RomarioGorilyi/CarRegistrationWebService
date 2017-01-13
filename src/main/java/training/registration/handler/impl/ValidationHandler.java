@@ -1,5 +1,6 @@
 package training.registration.handler.impl;
 
+import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
 import training.registration.handler.RegistrationChainHandler;
@@ -8,6 +9,7 @@ import training.registration.handler.utils.Validate;
 /**
  * @author Roman Horilyi
  */
+@Component
 public class ValidationHandler implements RegistrationChainHandler {
 
     @Override

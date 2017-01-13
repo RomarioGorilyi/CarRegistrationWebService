@@ -1,18 +1,22 @@
 package training.registration.handler.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
 import training.registration.handler.RegistrationChainHandler;
 
-import javax.annotation.Resource;
-
 /**
  * @author Roman Horilyi
  */
+@Component
 public class RegisterInCarDeptHandler implements RegistrationChainHandler {
 
-    @Resource
-    private CarRegisterRemote carRegisterRemote;
+    private final CarRegisterRemote carRegisterRemote;
+
+    public RegisterInCarDeptHandler(CarRegisterRemote carRegisterRemote) {
+        this.carRegisterRemote = carRegisterRemote;
+    }
 
     @Override
     public long handle(Car car, RegistrationChain chain) throws Exception {
