@@ -1,15 +1,17 @@
 package training.registration.handler.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
 import training.registration.handler.RegistrationChainHandler;
+import training.registration.handler.utils.CarRegisterRemote;
 
 /**
  * @author Roman Horilyi
  */
 @Component
+@Order(8)
 public class RegisterInCarDeptHandler implements RegistrationChainHandler {
 
     private final CarRegisterRemote carRegisterRemote;

@@ -1,5 +1,6 @@
 package training.registration.handler.impl;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
@@ -14,6 +15,7 @@ import javax.persistence.PersistenceContext;
  * @author Roman Horilyi
  */
 @Component
+@Order(7)
 public class StoreCarHandler implements RegistrationChainHandler {
 
     @PersistenceContext

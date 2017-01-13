@@ -1,5 +1,6 @@
 package training.registration.handler.impl;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
@@ -11,6 +12,7 @@ import training.registration.handler.RegistrationChainHandler;
  * @author Roman Horilyi
  */
 @Component
+@Order(1)
 public class ExceptionTranslatorHandler implements RegistrationChainHandler {
 
     @Override

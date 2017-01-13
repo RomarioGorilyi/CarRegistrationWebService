@@ -1,5 +1,6 @@
 package training.registration.handler.impl;
 
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import training.registration.chain.RegistrationChain;
 import training.registration.domain.Car;
@@ -19,6 +20,7 @@ import java.util.concurrent.*;
  * @author Roman Horilyi
  */
 //@Component
+@Order(3)
 public class HandlerWithTimeout implements RegistrationChainHandler {
 
     @Resource
